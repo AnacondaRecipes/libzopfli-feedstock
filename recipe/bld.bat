@@ -13,6 +13,7 @@ cmake -LAH -G "Ninja"                                                     ^
     -DCMAKE_INSTALL_INCLUDEDIR=%LIBRARY_INC%\zopfli                       ^
     -DBUILD_SHARED_LIBS=1                                                 ^
     -DZOPFLI_BUILD_SHARED=1                                               ^
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5                                    ^
     ..
 
 if errorlevel 1 exit 1

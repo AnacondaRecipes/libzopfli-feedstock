@@ -11,6 +11,7 @@ cmake -LAH                                                                \
     -DCMAKE_INSTALL_LIBDIR="lib"                                          \
     -DBUILD_SHARED_LIBS=1                                                 \
     -DZOPFLI_BUILD_SHARED=1                                               \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5                                    \
     ..
 
 make -j${CPU_COUNT}
