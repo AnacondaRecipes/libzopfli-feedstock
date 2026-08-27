@@ -24,7 +24,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake >3.5
+    - cmake
     - make   # [unix]
     - ninja  # [win]
  
