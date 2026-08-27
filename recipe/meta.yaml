@@ -2,7 +2,7 @@
 {% set version = "1.0.3" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -13,7 +13,7 @@ source:
     - include_more_headers.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # Seems like a package with very few releases.
     # Most PRs seem to be stale
@@ -24,11 +24,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake >3.5
     - make   # [unix]
     - ninja  # [win]
-    - patch       # [not win]
-    - m2-patch    # [win]
  
 test:
   commands:
