@@ -13,7 +13,7 @@ source:
     - include_more_headers.patch
 
 build:
-  number: 1
+  number: 2
   run_exports:
     # Seems like a package with very few releases.
     # Most PRs seem to be stale
@@ -22,6 +22,7 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
